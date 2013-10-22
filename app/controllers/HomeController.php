@@ -15,9 +15,21 @@ class HomeController extends BaseController {
 	|
 	*/
 
+    public function __construct()
+    {
+        if(Input::has('format')) {
+            $this->format = Input::get('format');
+        }
+    }
+
 	public function showWelcome()
 	{
-		return View::make('hello');
+        $this->viewData = array(
+            'greeting' => 'Hello world!',
+        );
+
+        $this->layout = 'hello';
+		return $this->setupLayout();
 	}
 
 }
