@@ -11,6 +11,13 @@
 |
 */
 
+Route::group(array('prefix' => 'auth'), function() {
+    Route::get('login', array('before' => 'guest', 'uses' => 'AuthController@getLogin'));
+    Route::get('register', array('before' => 'guest', 'uses' => 'AuthController@getRegister'));
+    Route::get('password-reset', array('before' => 'guest', 'uses' => 'AuthController@getPasswordReset'));
+    Route::get('forgot-password', array('before' => 'guest', 'uses' => 'AuthController@getForgotPassword'));
+});
+
 Route::get('/', function()
 {
 	return View::make('hello');

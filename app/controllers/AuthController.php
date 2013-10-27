@@ -14,4 +14,25 @@ class AuthController extends BaseController
 
         $this->setupLayout();
     }
+
+    public function getRegister()
+    {
+        $this->layout = 'auth.register';
+
+        $this->setupLayout();
+    }
+
+    public function getPasswordReset()
+    {
+        $this->layout = 'auth.password_reset';
+
+        $this->setupLayout();
+    }
+
+    public function getForgotPassword()
+    {
+        $this->layout = 'auth.forgot_password';
+
+        $this->setupLayout();
+    }
 }

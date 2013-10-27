@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Do stuff!">
     <meta name="author" content="Nicholas J">
-    <title>@yield('title') - {{ Config::get('app.name') }}</title>
+    <title>
+        @yield('title')
+        - {{ Config::get('app.name') }}</title>
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <!-- Add custom CSS here -->
     <style>
-        body {margin-top: 60px;}
+        body {margin-top: 75px;}
     </style>
 </head>
 <body>
